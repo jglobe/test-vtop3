@@ -1,0 +1,17 @@
+<div class='radio'>
+  <span class='radio__label'>
+    {{ radio.label }}
+  </span>
+  {% for dot in radio.buttons %}
+    <label class='radio__radio'>
+      <input
+        class='radio__dot'
+        type='radio'
+        name='{{ radio.name }}'
+        value='{{ dot.value }}'
+        {%if dot.checked %}checked{% endif %}
+      >
+      {{ dot.label }}
+    </label>
+  {% endfor %}
+</div>

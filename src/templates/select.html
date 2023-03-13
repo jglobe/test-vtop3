@@ -1,0 +1,20 @@
+<div class='select'>
+  <label
+    class='select__label'
+    for='select-{{ simpleSelect.name }}'
+  >
+    {{ simpleSelect.label }}
+  </label>
+  <select
+    class='select__select'
+    id='select-{{ simpleSelect.name }}'
+    name='{{ simpleSelect.name }}'
+    size='1'
+  >
+    {% for option in simpleSelect.options %}
+      <option value='{{ option.value }}'>
+        {{ option.title }}
+      </option>
+    {% endfor %}
+  </select>
+</div>

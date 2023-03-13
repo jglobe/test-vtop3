@@ -1,0 +1,86 @@
+<div class='wrapper'>
+  <section class='wrapper__form'>
+    <h2 class='title'>
+      Sign up
+    </h2>
+    <div
+      class='info'
+      id='{{ ID }}Info'
+      >
+      <h3
+        id='{{ ID }}Question'
+        class='info__question'
+      >
+        New user?
+      </h3>
+      <p
+        class='info__description'
+        id='{{ ID }}Description'
+      >
+        Use the form below to create your account.
+      </p>
+    </div>
+    <form
+      class='form'
+      id='{{ ID }}Form'
+    >
+      <div class='form__inputs'>
+        {%set input = { label: 'First Name', name: 'firstName', type: 'text' } %}
+        {%include 'templates/input.html' %}
+
+        {%set input = { label: 'Last Name', name: 'lastName', type: 'text' } %}
+        {%include 'templates/input.html' %}
+
+        {%set simpleSelect = { label: 'Nationality', name: 'nationality',
+          options: [ {title:'American', value:'usa'}, {title:'Belarus', value:'blr'} ] }
+        %}
+        {%include 'templates/select.html' %}
+
+        {%set input = { label: 'E-mail', name: 'email', type: 'email' } %}
+        {%include 'templates/input.html' %}
+
+        {%set dateSelect = {
+            label: 'Date of Birth',
+            day: {
+              name: 'day',
+              values: ['1', '2', '3']
+            },
+            month: {
+              name: 'month',
+              values: ['January', 'February', 'March']
+            },
+            year: {
+              name: 'year',
+              values: ['1995', '1996', '1997']
+            }
+        } %}
+        {%include 'templates/date-select.html' %}
+
+        {%set radio = { label: 'Gender', name:'gender', buttons: [ {label:'Male', value:'m', checked: true}, {label:'Female', value:'f'} ] } %}
+        {%include 'templates/radio.html' %}
+
+        {%set input = { label: 'Password', name: 'password', type: 'password' } %}
+        {%include 'templates/input.html' %}
+
+        {%set input = { label: 'Confirm Password', name: 'confirmPassword', type: 'password' } %}
+        {%include 'templates/input.html' %}
+      </div>
+    </form>
+    <div class='form__actions'>
+      <p class='action_alt'>
+        Have an account?
+        <a class='action__link' href="#">
+          Login
+        </a>
+      </p>
+      <button
+        class='action_submit'
+        type="submit"
+        id='{{ ID }}Submit'
+        form='{{ ID }}Form'
+      >
+        Complete Signup
+      </button>
+    </div>
+  </section>
+</div>

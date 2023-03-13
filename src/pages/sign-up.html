@@ -1,0 +1,10 @@
+{% extends "layouts/auth-layout.html" %}
+{% set CSS = 'styles/auth.css' %}
+{% set PAGE_TITLE = 'Sign up' %}
+
+{% block content %}
+  {% set ID = 'signIn' %}
+  {% include 'templates/form.html' %}
+{% endblock %}
+
+{% set JS = 'scripts/index.js' %}

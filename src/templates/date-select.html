@@ -1,0 +1,38 @@
+<div class='date'>
+  <span class='date__label'>
+    {{ dateSelect.label }}
+  </span>
+  <select
+    class='date__day'
+    name='{{ dateSelect.day.name }}'
+    size='1'
+  >
+    {% for day in dateSelect.day.values %}
+      <option value='{{ day }}'>
+        {{ day }}
+      </option>
+    {% endfor %}
+  </select>
+  <select
+    class='date__month'
+    name='{{ dateSelect.month.name }}'
+    size='1'
+  >
+    {% for month in dateSelect.month.values %}
+      <option value='{{ month }}'>
+        {{ month }}
+      </option>
+    {% endfor %}
+  </select>
+  <select
+    class='date__year'
+    name='{{ dateSelect.year.name }}'
+    size='1'
+  >
+    {% for year in dateSelect.year.values %}
+      <option value='{{ year }}'>
+        {{ year }}
+      </option>
+    {% endfor %}
+  </select>
+  </div>
