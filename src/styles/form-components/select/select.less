@@ -1,0 +1,50 @@
+.select {
+  margin: 0;
+
+  width: 235px;
+  height: 42px;
+  border: none;
+  background: transparent;
+
+  position: relative;
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+
+    color: var(--font-color-secondary);
+  }
+
+  &__select {
+    padding-top: 18px;
+
+    height: 100%;
+    width: 100%;
+
+    font-size: 14px;
+    line-height: 16px;
+
+    color: var(--font-color-primary);
+    border: none;
+    border-bottom: solid 1px var(--background-auth-color);
+    background: transparent;
+    background-image: url(/images/chevron.svg);
+    background-repeat: no-repeat;
+    background-position: right 28px;
+    -webkit-appearance: none;
+    outline: none;
+  }
+
+  &__select:focus {
+    border-color: var(--font-color-primary);
+  }
+
+  &__select:hover {
+    border-color: var(--font-color-primary);
+  }
+}

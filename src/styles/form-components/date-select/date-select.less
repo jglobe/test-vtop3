@@ -1,0 +1,63 @@
+.date {
+  margin: 0;
+
+  width: 235px;
+  height: 42px;
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+
+  position: relative;
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+
+    color: var(--font-color-secondary);
+  }
+
+  &__day {
+    max-width: 56px;
+  }
+
+  &__year {
+    max-width: 68px;
+  }
+
+  &__day, &__month, &__year {
+    padding-top: 18px;
+
+    height: 100%;
+    width: 100%;
+
+    font-size: 14px;
+    line-height: 16px;
+
+    color: var(--font-color-primary);
+    border: none;
+    border-bottom: solid 1px var(--background-auth-color);
+    background: transparent;
+    outline: none;
+    background-image: url(/images/chevron.svg);
+    background-repeat: no-repeat;
+    background-position: right 28px;
+    appearance: none;
+    outline: none;
+
+    &:focus {
+      border-color: var(--font-color-primary);
+    }
+
+    &:hover {
+      border-color: var(--font-color-primary);
+    }
+  }
+}

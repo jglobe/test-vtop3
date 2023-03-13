@@ -1,0 +1,56 @@
+.radio {
+  margin: 0;
+
+  width: 235px;
+  height: 42px;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+
+  border: none;
+  background: transparent;
+  position: relative;
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+
+    color: var(--font-color-secondary);
+  }
+
+  &__dot {
+    margin: 0;
+
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+
+    appearance: none;
+    outline-offset: 0;
+    border: solid 2px #fff;
+    box-shadow: 0 0 0 1px var(--main-color);
+
+    &:checked {
+      box-shadow: 0 0 0 1px var(--main-color);
+      background-color: var(--main-color);
+      border-width: 2px;
+    }
+  }
+
+  &__radio {
+    padding-top: 18px;
+
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+}
