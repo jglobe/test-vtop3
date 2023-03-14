@@ -158,4 +158,10 @@ function returnErrors(form, errors) {
       e.nextSibling.nextSibling.innerHTML = message
     })
   }
+
+  const button = document.querySelector('.action_submit');
+  button.classList.add('action_submit_shake');
+  setTimeout(() => {
+    button.classList.remove('action_submit_shake');
+  }, 1000);
 }

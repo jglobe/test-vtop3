@@ -40,12 +40,18 @@
       border-color: var(--element-color-error);
 
       & + .input__message_error {
+        width: inherit;
+
         position: absolute;
         bottom: -16px;
         left: 0;
 
         font-size: 12px;
         color: var(--text-color-error);
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }

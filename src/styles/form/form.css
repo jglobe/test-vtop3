@@ -4,8 +4,8 @@
   display: flex;
 }
 .wrapper__form {
-  margin: 0 0 0 138px;
-  padding: 39px 22px 33px 21px;
+  margin: 0;
+  padding: 39px 22px 33px 159px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,11 +20,17 @@
   line-height: 26px;
   font-weight: 600;
   letter-spacing: -0.46px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: var(--font-color-primary);
 }
 .info__description {
   color: var(--font-color-primary);
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .info_error {
   padding: 0 43px;
@@ -40,7 +46,7 @@
   width: 480px;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 138px;
   transform-origin: left bottom;
   transform: rotate(-90deg);
   display: flex;
@@ -70,6 +76,37 @@
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 16px;
+  transition-delay: 3s;
+}
+.form__inputs > div {
+  animation-name: animateIn;
+  animation-duration: 900ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.form__inputs div:nth-child(1) {
+  animation-delay: 0s;
+}
+.form__inputs div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.form__inputs div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.form__inputs div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.form__inputs div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.form__inputs div:nth-child(6) {
+  animation-delay: 1s;
+}
+.form__inputs div:nth-child(7) {
+  animation-delay: 1.2s;
+}
+.form__inputs div:nth-child(8) {
+  animation-delay: 1.4s;
 }
 .action_alt {
   height: 32px;
@@ -95,6 +132,9 @@
 .action_submit:hover {
   opacity: 0.9;
 }
+.action_submit_shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
 .action__link {
   color: var(--main-color);
   text-decoration: underline;
@@ -102,6 +142,33 @@
 }
 .action__link:hover {
   text-decoration: none;
+}
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 @media (max-width: 680px) and (min-width: 320px) {
   .wrapper {
