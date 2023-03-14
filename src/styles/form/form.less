@@ -3,6 +3,9 @@
   height: 480px;
 
   display: flex;
+  position: relative;
+
+  background-color: var(--white-color);
 
   &__form {
     margin: 0;
@@ -13,11 +16,22 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: 1;
 
-    background-color: var(--white-color);
-    background-image: url(/images/person.svg);
+    background-color: transparent;;
     background-repeat: no-repeat;
     background-position: bottom right;
+  }
+
+  &__bgimage {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+    path {
+      fill-opacity: 0;
+    }
   }
 }
 

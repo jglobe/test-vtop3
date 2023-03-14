@@ -74,6 +74,8 @@ select {
   width: 665px;
   height: 480px;
   display: flex;
+  position: relative;
+  background-color: var(--white-color);
 }
 .wrapper__form {
   margin: 0;
@@ -82,10 +84,19 @@ select {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: var(--white-color);
-  background-image: url(/images/person.svg);
+  z-index: 1;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: bottom right;
+}
+.wrapper__bgimage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.wrapper__bgimage path {
+  fill-opacity: 0;
 }
 .info__question {
   font-size: 22px;

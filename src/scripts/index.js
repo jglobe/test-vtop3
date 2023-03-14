@@ -165,3 +165,14 @@ function returnErrors(form, errors) {
     button.classList.remove('action_submit_shake');
   }, 1000);
 }
+
+new Vivus('animatedPerson', {
+  duration: 1000,
+  start: 'autostart',
+  animTimingFunction: Vivus.EASE,
+  onReady: function (myVivus) {
+    myVivus.play(2, function () {
+      myVivus.el.querySelector('path').style.fillOpacity = 1;
+    })
+  }
+});

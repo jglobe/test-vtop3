@@ -6,6 +6,7 @@ import image from 'gulp-image';
 import autoprefixer from 'gulp-autoprefixer';
 import cssnano from 'gulp-cssnano';
 import uglify from 'gulp-uglify';
+import concat from 'gulp-concat';
 import jsonFormat  from 'gulp-json-format';
 import browsersync from 'browser-sync';
 
@@ -67,7 +68,8 @@ function imagesTask() {
 }
 
 function jsTask() {
-  return src(path.src.js)
+  return src(['node_modules/vivus/dist/vivus.min.js', path.src.js])
+    .pipe(concat('index.js'))
     .pipe(uglify())
     .pipe(dest(path.build.js));
 }
