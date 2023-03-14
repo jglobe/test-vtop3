@@ -102,6 +102,16 @@ function watchTask(){
   watch(path.watcher.json, series(jsonTask, browsersyncReload));
 }
 
+const build = series(
+  htmlTask,
+  cssTask,
+  imagesTask,
+  jsTask,
+  jsonTask
+);
+
+export { build };
+
 export default series(
   htmlTask,
   cssTask,
